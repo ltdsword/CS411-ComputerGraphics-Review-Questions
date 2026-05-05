@@ -1,0 +1,10 @@
+# CS411 Lab 02 - Input File
+# Format: TYPE X1 Y1 [X2 Y2 / R / A B / P]
+# 0: Line DDA, 1: Line Bresenham, 2: Circle, 3: Ellipse, 4: Parabola, 5: Hyperbola
+
+0 50 50 300 200
+1 50 250 300 400
+2 400 150 80
+3 400 350 100 60
+4 400 500 20
+5 400 300 40 30

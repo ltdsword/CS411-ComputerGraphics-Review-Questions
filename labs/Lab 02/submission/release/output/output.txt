@@ -1,0 +1,106 @@
+==================================================
+  2D DRAWING ALGORITHMS BENCHMARK RESULTS
+==================================================
+
+Object 1: Line DDA (50 50 300 200)
+  Custom Algorithm (Line DDA):
+    Execution Time: 339.5280 ms
+    Average Error:  0.2050 px
+    Pixel Count:    251
+
+  OpenGL Function (Line Parametric):
+    Execution Time: 496.6240 ms
+    Average Error:  0.2389 px
+    Pixel Count:    267
+
+  Comparison:
+    Speed Ratio (OpenGL/Custom): 1.46x
+    Custom algorithm is FASTER
+
+--------------------------------------------------
+
+Object 2: Line Bresenham (50 250 300 400)
+  Custom Algorithm (Line Bresenham):
+    Execution Time: 392.2150 ms
+    Average Error:  0.2050 px
+    Pixel Count:    251
+
+  OpenGL Function (Line Parametric):
+    Execution Time: 455.7830 ms
+    Average Error:  0.2389 px
+    Pixel Count:    267
+
+  Comparison:
+    Speed Ratio (OpenGL/Custom): 1.16x
+    Custom algorithm is FASTER
+
+--------------------------------------------------
+
+Object 3: Circle Midpoint (400 150 80)
+  Custom Algorithm (Circle Midpoint):
+    Execution Time: 663.0590 ms
+    Average Error:  0.2072 px
+    Pixel Count:    452
+
+  OpenGL Function (Circle Parametric):
+    Execution Time: 1310.0920 ms
+    Average Error:  0.2274 px
+    Pixel Count:    474
+
+  Comparison:
+    Speed Ratio (OpenGL/Custom): 1.98x
+    Custom algorithm is FASTER
+
+--------------------------------------------------
+
+Object 4: Ellipse Midpoint (400 350 100 60)
+  Custom Algorithm (Ellipse Midpoint):
+    Execution Time: 834.3710 ms
+    Average Error:  0.0062 px
+    Pixel Count:    468
+
+  OpenGL Function (Ellipse Parametric):
+    Execution Time: 2010.4540 ms
+    Average Error:  0.0067 px
+    Pixel Count:    474
+
+  Comparison:
+    Speed Ratio (OpenGL/Custom): 2.41x
+    Custom algorithm is FASTER
+
+--------------------------------------------------
+
+Object 5: Parabola Midpoint (400 500 20)
+  Custom Algorithm (Parabola Midpoint):
+    Execution Time: 1830.3830 ms
+    Average Error:  1.9944 px
+    Pixel Count:    673
+
+  OpenGL Function (Parabola Parametric):
+    Execution Time: 497.0350 ms
+    Average Error:  0.2200 px
+    Pixel Count:    179
+
+  Comparison:
+    Speed Ratio (OpenGL/Custom): 0.27x
+    OpenGL function is FASTER
+
+--------------------------------------------------
+
+Object 6: Hyperbola Midpoint (400 300 40 30)
+  Custom Algorithm (Hyperbola Midpoint):
+    Execution Time: 1337.9690 ms
+    Average Error:  0.9844 px
+    Pixel Count:    404
+
+  OpenGL Function (Hyperbola Parametric):
+    Execution Time: 1143.5060 ms
+    Average Error:  0.0866 px
+    Pixel Count:    282
+
+  Comparison:
+    Speed Ratio (OpenGL/Custom): 0.85x
+    OpenGL function is FASTER
+
+--------------------------------------------------
+
