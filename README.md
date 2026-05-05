@@ -80,3 +80,5 @@ Contributions are welcome! You can:
 
 If you have suggestions or questions, feel free to open an issue or contribute directly.
 Read .env for more instructions.
+
+Đạt: Hello
