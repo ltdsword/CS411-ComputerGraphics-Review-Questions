@@ -1,1 +1,203 @@
-test
+I can read all 7 pages clearly. Let me now answer all 30 questions based on the course notes.
+
+---
+
+## 30 MCQ Answers — CS411 Final Exam
+
+---
+
+**Q1.** In computer graphics, we use the cross product of two vectors to calculate:
+→ **c) Normal vector at the specific point on one surface**
+*(Cross product of two tangent vectors on a surface gives the surface normal — used in shading.)*
+
+---
+
+**Q2.** In the scaling operator of 2D transformation, the fixed point is utilized for the purpose of:
+→ **c) Scaling up and displaying one specified region of object in the viewport**
+*(Fixed-point scaling keeps the chosen point stationary while scaling around it — effectively zooming into a specific region.)*
+
+---
+
+**Q3.** Why do we need homogeneous coordinates in computer graphics?
+→ **a) Because it is useful for composite transformation**
+*(Homogeneous coordinates allow translation to be expressed as matrix multiplication, enabling all transformations to be composed by a single matrix product.)*
+
+---
+
+**Q4.** The inverse transformation of a rotation denoted by matrix A in 2D is:
+→ **d) All above answers are correct**
+*(A rotation matrix is: square (a), its inverse equals its transpose since it is orthogonal (b), and is by definition an inverse matrix (c).)*
+
+---
+
+**Q5.** What does this row-matrix transformation do?
+$$\begin{pmatrix}0 & -1 & 0\\ 1 & 0 & 0\\ 1 & 1 & 1\end{pmatrix}$$
+→ **d) rotation, then translation**
+*(The 2×2 top-left block $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ is a 90° rotation; the last row $(1,1,1)$ adds translation $(1,1)$ after the rotation.)*
+
+---
+
+**Q6.** Which 2D transformations are affine transformations?
+→ **d) a), b), and c) are correct**
+*(All basic 2D transformations — rotation, scaling, shear, translation, reflection — are affine.)*
+
+---
+
+**Q7.** What is the difference between Bresenham and DDA algorithms?
+→ **b) Bresenham algorithm can utilize integer number only**
+*(DDA uses floating-point arithmetic; Bresenham eliminates division and works entirely with integers.)*
+
+---
+
+**Q8.** What is the difference between Bresenham and Midpoint algorithms?
+→ **d) All above are incorrect**
+*(From the notes: Bresenham = Midpoint. They are mathematically equivalent; both use integer-only arithmetic.)*
+
+---
+
+**Q9.** Parallel projection is different from perspective projection by:
+→ **a) The size of object in the 2D display scene is not dependent on the distance from the object to eye point**
+*(In parallel projection, object size is independent of depth. Options b and c describe perspective, not parallel.)*
+
+---
+
+**Q10.** In Sutherland–Hodgeman polygon clipping, the final result will be:
+→ **a) only one polygon**
+*(From the notes: "This algorithm always generates a single polygon in the output.")*
+
+---
+
+**Q11.** In Cyrus–Beck, what is $D$ in the condition $N_i \cdot D = 0$, where $D = [P_1 - P_0]$?
+→ **c) D is a vector with its head and tail positioning at $P_1$ and $P_0$, respectively**
+*($D = P_1 - P_0$ is a direction vector from $P_0$ (tail) to $P_1$ (head).)*
+
+---
+
+**Q12.** The efficiency of Sutherland–Hodgeman polygon clipping comes from:
+→ **a) Pipelining**
+*(The algorithm clips against each edge sequentially — each stage feeds results into the next as a pipeline.)*
+
+---
+
+**Q13.** The efficiency of Liang–Barsky line clipping comes from:
+→ **b) Integer computations**
+*(By reducing clipping to parametric inequalities $p_k t \leq q_k$, floating-point intersection calculations are eliminated.)*
+
+---
+
+**Q14.** The efficiency of Cohen–Sutherland line clipping comes from:
+→ **c) Logic computations**
+*(The 4-bit region codes allow trivial accept/reject using bitwise AND/OR operations.)*
+
+---
+
+**Q15.** To classify one basic color in color space, we can utilize the value of:
+→ **c) H in HSV space**
+*(H = Hue = the dominant wavelength = the color itself. R alone does not define a full color; L is lightness; Y is just yellow component.)*
+
+---
+
+**Q16.** Which color system has the largest range of color expression?
+→ **d) CIE**
+*(From notes: "The 1931 CIE Chromaticity Diagram represents the whole gamut of human color perception" — larger than any device-dependent space like RGB or CMY.)*
+
+---
+
+**Q17.** The HSR result shows surfaces that cannot be hidden correctly (cat still has visible back faces). Which HSR method was applied?
+→ **b) Back-face culling**
+*(From notes: "Back-face culling only works correctly for convex, closed objects. Fails for concave objects." A cat is non-convex — back faces show through.)*
+
+---
+
+**Q18.** What is the similar point between Phong shading and Gouraud shading?
+→ **c) Two methods calculate normal vector at each vertex firstly**
+*(Both start by computing vertex normals by averaging adjacent face normals. They differ in what they interpolate afterward.)*
+
+---
+
+**Q19.** To fill color in a 3D non-convex object without mismatch, which HL/HSR method applies?
+→ **a) Scan line method**
+*(Scan-line uses per-pixel depth comparison and correctly handles non-convex objects. Back-face culling fails for non-convex; Painter can fail with cyclic overlap.)*
+
+---
+
+**Q20.** Which HL/HSR method returns an INCORRECT result for a completely convex 3D object?
+→ **d) All above answers are incorrect**
+*(Z-buffer, Back-face culling, and Painter's algorithm all work correctly for a completely convex object. None give incorrect results.)*
+
+---
+
+**Q21.** Which projection does NOT have the direction of projection perpendicular to the viewing plane?
+→ **c) Oblique Parallel Projection**
+*(Oblique projection uses projectors at an angle to the view plane by definition. Orthographic and axonometric both have perpendicular projectors.)*
+
+---
+
+**Q22.** The correct order of processes to build one image of a 3D object is:
+→ **a) Cloud points → Wireframe → HL/HSR → Shading → 3D object image**
+*(First get geometry from point cloud, build mesh/wireframe, remove hidden surfaces, apply shading, output final image.)*
+
+---
+
+**Q23.** Phong illumination and Phong shading can be explained as:
+→ **d) All above answers are correct**
+*(a) Phong illumination computes reflection intensity ✓; (b) Phong shading applies it to a surface ✓; (c) Phong shading interpolates normals and applies the model per pixel ✓.)*
+
+---
+
+**Q24.** Which portion of the Phong illumination model gives spheres their bright white spots?
+→ **c) Specular**
+*(The specular term $k_s I_{\text{light}}(\mathbf{R} \cdot \mathbf{V})^n$ produces the bright highlight spot on smooth surfaces.)*
+
+---
+
+**Q25.** Which of the following is NOT a vector needed for the Phong illumination model?
+→ **c) Direction to the Center of object**
+*(Phong model requires: Surface Normal **N**, Direction to Light **L**, Mirror Reflection **R**, Direction to Viewer **V**. Center of object is not used.)*
+
+---
+
+**Q26.** Main difference between traditional rendering and 3D Gaussian Splatting?
+→ **b) Gaussian Splatting represents scenes using Gaussian distributions instead of triangle meshes**
+*(From notes: "Represent the scene as 3D Gaussians instead of a mesh or neural network.")*
+
+---
+
+**Q27.** In stereo correspondence, what does "disparity" represent?
+→ **b) The positional difference of a point between two images**
+*(From notes: $d = x_1 - x_2$ = difference in horizontal coordinates of the same point in left and right images.)*
+
+---
+
+**Q28.** In Structure from Motion (SfM), what is the main objective?
+→ **b) Reconstruct 3D structure and motion from multiple images**
+*(From notes: "Given m images, estimate m projection matrices and n 3D points.")*
+
+---
+
+**Q29.** In 3D Gaussian Splatting, which is NOT a parameter describing a Gaussian?
+→ **d) Gradient descent rate**
+*(From notes, Gaussian parameters are: mean $\mu$, covariance $\Sigma$, opacity $\alpha$, color $c$. Gradient descent rate is an optimizer hyperparameter, not a Gaussian property.)*
+
+---
+
+**Q30.** Why must the covariance matrix be positive semi-definite in 3DGS?
+→ **b) To ensure the Gaussian has a valid shape**
+*(From notes: "$\Sigma$ has a physical meaning only if it is positive semi-definite" — it must describe a valid ellipsoid shape.)*
+
+---
+
+## Summary Table
+
+| Q | Ans | Q | Ans | Q | Ans |
+|---|-----|---|-----|---|-----|
+| 1 | c | 11 | c | 21 | c |
+| 2 | c | 12 | a | 22 | a |
+| 3 | a | 13 | b | 23 | d |
+| 4 | d | 14 | c | 24 | c |
+| 5 | d | 15 | c | 25 | c |
+| 6 | d | 16 | d | 26 | b |
+| 7 | b | 17 | b | 27 | b |
+| 8 | d | 18 | c | 28 | b |
+| 9 | a | 19 | a | 29 | d |
+| 10 | a | 20 | d | 30 | b |
