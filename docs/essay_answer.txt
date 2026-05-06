@@ -1,0 +1,42 @@
+(Khoa Pham cau 1, ae check var giups)
+
+Got it. Here is the same answer in a clean, exam-writable format:
+
+---
+
+**Compare Gouraud Shading and Phong Shading**
+
+**1. Concept**
+
+- **Gouraud shading:** computes illumination at each *vertex*, then *interpolates the color* across the polygon surface.
+- **Phong shading:** interpolates the *surface normal* across the polygon, then computes illumination at *every pixel* using the interpolated normal.
+
+**2. Steps**
+
+*Gouraud:*
+- Step 1: Compute vertex normals (average of surrounding face normals).
+- Step 2: Apply illumination model at each vertex to get vertex colors.
+- Step 3: Bilinearly interpolate colors along scan lines to fill the polygon.
+
+*Phong shading:*
+- Step 1: Compute vertex normals (same as Gouraud).
+- Step 2: Linearly interpolate the normals across pixels: $N_{n} = N_{n-1} + \Delta N$
+- Step 3: Apply the illumination model at **every pixel** using the interpolated normal.
+
+**3. Both use the Phong illumination model:**
+
+$$I = k_a I_a + k_d I_{\text{light}}(\mathbf{N} \cdot \mathbf{L}) + k_s I_{\text{light}}(\mathbf{R} \cdot \mathbf{V})^n$$
+
+The difference is *where* **N** is evaluated: at vertices (Gouraud) vs. at every pixel (Phong shading).
+
+**4. Performance comparison**
+
+| Criterion | Gouraud | Phong Shading |
+|-----------|---------|--------------|
+| Computation | Per vertex (fast) | Per pixel (slow) |
+| Specular highlights | May be missed or distorted | Captured accurately |
+| Visual quality | Medium | High |
+
+**5. Conclusion**
+
+Gouraud shading is faster but can miss specular highlights between vertices. Phong shading is more expensive but produces accurate highlights, making it better for shiny surfaces.
